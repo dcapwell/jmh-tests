@@ -14,33 +14,33 @@ public class FunctionTypes {
   private final Work2 work2 = work;
 
   @Benchmark
-  public void staticFunctions() {
-    RealWork.doWorkStatic(Collections.emptyList());
+  public int staticFunctions() {
+    return RealWork.doWorkStatic(Collections.emptyList());
   }
 
   @Benchmark
-  public void staticFunctionsWithState() {
-    RealWork.doWorkStatic();
+  public int staticFunctionsWithState() {
+    return RealWork.doWorkStatic();
   }
 
   @Benchmark
-  public void interfaceMethods() {
-    work1.doWorkInterface(Collections.emptyList());
+  public int interfaceMethods() {
+    return work1.doWorkInterface(Collections.emptyList());
   }
 
   @Benchmark
-  public void interfaceMethodsWithState() {
-    work1.doWorkInterface();
+  public int interfaceMethodsWithState() {
+    return work1.doWorkInterface();
   }
 
   @Benchmark
-  public void abstractMethods() {
-    work2.doWorkAbstract(Collections.emptyList());
+  public int abstractMethods() {
+    return work2.doWorkAbstract(Collections.emptyList());
   }
 
   @Benchmark
-  public void abstractMethodsWithState() {
-    work2.doWorkAbstract();
+  public int abstractMethodsWithState() {
+    return work2.doWorkAbstract();
   }
 
   private interface Work1 {
