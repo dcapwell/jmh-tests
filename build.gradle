@@ -54,6 +54,7 @@ dependencies {
 jmh {
   include = 'com.github.dcapwell.java.methodtypes.*'
   iterations = 10
+  fork = 2
   benchmarkMode = 'thrpt'
   failOnError = true
 }
